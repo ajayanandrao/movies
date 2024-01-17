@@ -1,0 +1,111 @@
+@import "./../../Styles/Mixin_New.scss";
+
+.page-one-main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .carousel {
+        width: 100%;
+        height: 500px;
+        border-radius: 8px;
+        position: relative;
+
+
+        @include respond-to(sm) {
+            height: 450px;
+        }
+
+        @include respond-to(xs) {
+            height: 240px;
+        }
+
+        .carousel-control-next {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translate(-10%, -50%);
+            border-radius: 30px;
+        }
+
+        .carousel-control-prev {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(10%, -50%);
+
+        }
+    }
+
+    .image-div {
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+
+        @include respond-to(sm) {
+            height: 450px;
+        }
+
+        @include respond-to(xs) {
+            height: 240px;
+        }
+
+        .image-data {
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            padding: 30px 70px;
+
+            .title-margin {
+                margin: 10px 0;
+
+                @include respond-to(xs) {
+                    margin: 3px 0;
+                    max-width: 150px;
+                }
+            }
+
+            .title-des {
+                @include respond-to(xs) {
+                    width: 100%;
+                    max-width: 300px;
+                    display: none;
+                }
+            }
+
+            @include respond-to(xs) {
+
+                // display: none;
+                .tiel-img {
+                    width: 130px;
+                }
+
+                padding: 1rem;
+                font-size: 12px;
+                line-height: 15px;
+            }
+
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0));
+
+            @include respond-to(xs) {
+                max-width: 200px;
+            }
+        }
+
+        .watch-btn {
+            padding: 5px 20px;
+            border: 1px solid white;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            margin-top: 18px;
+        }
+    }
+
+}

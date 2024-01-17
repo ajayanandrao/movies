@@ -1,0 +1,156 @@
+@import "./../../Styles/Mixin_New.scss";
+@import "./../../Styles/Variable";
+
+.movie-cover-div {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease-in-ou;
+    margin-bottom: 50px;
+
+    @include respond-to(lg) {
+        height: 500px;
+    }
+
+    @include respond-to(md) {
+        height: 450px;
+    }
+
+    @include respond-to(sm) {
+        height: 450px;
+    }
+
+    @include respond-to(xs) {
+        height: 250px;
+    }
+
+    .name-img {
+        width: 100%;
+        padding-bottom: 50px;
+
+        @include respond-to(xs) {
+            padding-bottom: 20px;
+        }
+
+        .name-image {
+            width: 100%;
+            max-width: 350px;
+            object-fit: contain;
+            object-position: center;
+            transition: 0.5s ease-in-out;
+
+            @include respond-to(md) {
+                max-width: 300px;
+            }
+
+            @include respond-to(sm) {
+                max-width: 250px;
+            }
+
+            @include respond-to(xs) {
+                max-width: 150px;
+            }
+        }
+
+    }
+}
+
+.movie-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.about-movie {
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #1e293b;
+    display: flex;
+}
+
+.about-movie-two {
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    color: $gray-700;
+}
+
+.movie-photo {
+    width: 100%;
+    max-width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+
+    @include respond-to(xs) {
+        max-width: 280px;
+        height: 420px;
+    }
+}
+
+.screenShot-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .screenShot-grid {
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding-bottom: 30px;
+
+        @include respond-to(xs) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 500px;
+            height: 100%;
+            max-height: 250px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    }
+}
+
+.youtube-trailer {
+    width: 100%;
+    max-width: 700px;
+    height: 395px;
+    border-radius: 10px;
+    margin: 30px 0;
+
+    @include respond-to(xs) {
+        height: 200px;
+    }
+}
+
+.hr {
+    width: 100%;
+    max-width: 900px;
+}
+
+.movie-div-loading {
+    width: 100%;
+    height: 100vh;
+}

@@ -1,0 +1,117 @@
+@import "./../Styles/Mixin_New.scss";
+
+.Navbar-main {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #0307124f;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+
+    .search-div {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 1rem;
+
+        @include respond-to(xs) {
+            padding: 0;
+            display: none;
+        }
+
+        .search-warpper {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dbdbdb;
+            padding: 0 1rem;
+            border-radius: 30px;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 400px;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            height: 35px;
+            color: white;
+            background: transparent;
+            margin-bottom: 2px;
+        }
+    }
+
+    .navbar-title {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .navbar-item {
+        display: flex;
+        align-items: center;
+
+        @include respond-to(sm) {
+            display: none;
+        }
+
+        @include respond-to(xs) {
+            display: none;
+        }
+    }
+
+    .nav-menu {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 24px;
+        display: none;
+
+        @include respond-to(sm) {
+            display: flex;
+            flex: 0.0.5;
+        }
+
+        @include respond-to(xs) {
+            display: flex;
+        }
+    }
+
+    @include respond-to(xs) {
+        height: 60px;
+    }
+}
+
+.navbar-item-xs {
+    width: 60%;
+    height: 100vh;
+    background: #030712be;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+
+    .closeDiv {
+        position: absolute;
+        top: 5px;
+        right: 12px;
+        font-size: 30px;
+        color: white;
+        
+    }
+
+    .nav-item-xs-div {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
