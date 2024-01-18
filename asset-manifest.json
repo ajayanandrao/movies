@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/movies/static/css/main.f4d75541.css",
+    "main.js": "/movies/static/js/main.d4486695.js",
+    "static/js/679.d12809af.chunk.js": "/movies/static/js/679.d12809af.chunk.js",
+    "static/js/787.cb66a307.chunk.js": "/movies/static/js/787.cb66a307.chunk.js",
+    "static/media/marval.mp4": "/movies/static/media/marval.462b8703f4f23f676697.mp4",
+    "static/media/avatar.jpeg": "/movies/static/media/avatar.056dbbcd02d6a1e1a730.jpeg",
+    "static/media/disney.mp4": "/movies/static/media/disney.34d6796fc7568171a4c0.mp4",
+    "static/media/pixar.mp4": "/movies/static/media/pixar.1c68b2645dcfab13ac89.mp4",
+    "static/media/star.mp4": "/movies/static/media/star.b11fc946626efa622eac.mp4",
+    "index.html": "/movies/index.html",
+    "main.f4d75541.css.map": "/movies/static/css/main.f4d75541.css.map",
+    "main.d4486695.js.map": "/movies/static/js/main.d4486695.js.map",
+    "679.d12809af.chunk.js.map": "/movies/static/js/679.d12809af.chunk.js.map",
+    "787.cb66a307.chunk.js.map": "/movies/static/js/787.cb66a307.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4d75541.css",
+    "static/js/main.d4486695.js"
+  ]
+}
