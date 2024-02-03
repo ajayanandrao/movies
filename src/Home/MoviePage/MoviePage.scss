@@ -1,6 +1,9 @@
 @import "./../../Styles/Mixin_New.scss";
 @import "./../../Styles/Variable";
 
+
+
+
 .movie-cover-div {
     width: 100%;
     height: 600px;
@@ -12,9 +15,10 @@
     justify-content: end;
     flex-direction: column;
     padding: 1rem;
-    position: relative;
+    position: sticky;
+    top: 0px;
     overflow: hidden;
-    transition: 0.5s ease-in-ou;
+    transition: 0.5s ease-in-out;
     margin-bottom: 50px;
 
     @include respond-to(lg) {
@@ -35,10 +39,13 @@
 
     .name-img {
         width: 100%;
-        padding-bottom: 50px;
+        max-width: 250px;
 
+        // padding-bottom: 50px;
         @include respond-to(xs) {
             padding-bottom: 20px;
+            max-width: 100px;
+            height: 40px;
         }
 
         .name-image {
@@ -62,19 +69,35 @@
         }
 
     }
+
+    .name-overview{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        width: 100%;
+        max-width: 600px;
+        margin: 1rem 0;
+    }
 }
 
 .movie-main {
     width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
+    position: relative;
+    z-index: 1;
+    background: #030712;
+    border-radius: 10px;
 }
 
 .about-movie {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     padding: 1rem;
     border-radius: 5px;
     background-color: #1e293b;
@@ -83,7 +106,7 @@
 
 .about-movie-two {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     padding: 1rem;
     border-radius: 5px;
     display: flex;
@@ -91,10 +114,38 @@
     color: $gray-700;
 }
 
+.movie-about-div {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+
+    @include respond-to(xs) {
+        flex-direction: column;
+    }
+
+    @include respond-to(sm) {
+        flex-direction: column;
+    }
+
+    .movie-about-detail {
+        margin-left: 50px;
+
+        @include respond-to(xs) {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+
+        @include respond-to(sm) {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+}
+
 .movie-photo {
     width: 100%;
-    max-width: 300px;
-    height: 450px;
+    max-width: 250px;
+    height: 360px;
     border-radius: 10px;
     object-fit: cover;
     transition: 0.5s ease-in-out;

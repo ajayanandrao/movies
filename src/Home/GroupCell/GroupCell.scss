@@ -70,6 +70,10 @@
         }
 
         .movie-sub-name {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 3;
             font-size: 14px;
             line-height: 15px;
 

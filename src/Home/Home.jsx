@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import GroupCell from './GroupCell/GroupCell';
 import PageOne from './PageOne/PageOne';
 import Category from './Category/Category';
+import Movie from './Movie';
 
 const Home = () => {
     const [timeLoading, setTimeLoading] = useState(true);
@@ -69,7 +70,6 @@ const Home = () => {
                     />
                 )}
             </div>
-
             <div className="group-bg-one"></div>
 
             <div className='group-bg'>
@@ -80,6 +80,19 @@ const Home = () => {
                             <h5 className='text-2xl group-title '>
                                 Recommended For You
                             </h5>
+
+                            <div className='ms-4' style={{ fontWeight: 500, color: "#5caceb" }}>See More</div>
+                        </div>
+                        <Movie />
+                    </>
+                }
+                {timeLoading ? <div className='placeholder-glow w-100'><div className='loading-div placeholder'></div></div> :
+                    <>
+                        <div className='d-flex mb-3'>
+                            <h5 className='text-2xl group-title '>
+                                Recommended For You
+                            </h5>
+
                             <div className='ms-4' style={{ fontWeight: 500, color: "#5caceb" }}>See More</div>
                         </div>
                         <GroupCell propsData={carouselImgLink} />
